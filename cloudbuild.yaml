@@ -1,0 +1,19 @@
+steps:
+# We will clone our repository
+- name: "gcr.io/cloud-builders/git"
+  args: ["clone","https://github.com/kamesh1231/backend.git"]
+
+# Build the image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build","-t","gcr.io/on-the-money/backend:latest","."]
+
+# Push the image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push","gcr.io/on-the-money/backend:latest"]
+
+# Deploy container image to cloud run
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["run","deploy","backend","--image","gcr.io/on-the-money/backend:latest","--region","australia-southeast1","--allow-unauthenticated"]
+
+images:
+- "gcr.io/on-the-money/backend:latest"
