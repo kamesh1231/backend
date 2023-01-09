@@ -13,7 +13,7 @@ COPY . /app
 
 ## install required redundancies
 
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
 
 EXPOSE $PORT
 
