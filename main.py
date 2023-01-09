@@ -3,7 +3,7 @@ from flask import Flask
 from utiles import recommend_low_selling_products_to_high_purchase_customers, recommend_high_selling_products_to_low_purchasing_customers
 
 
-PORT = os.environ.get("PORT",5000)
+PORT = os.environ.get("PORT",8080)
 
 server = Flask(__name__)
 
