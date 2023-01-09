@@ -1,7 +1,7 @@
 steps:
 # We will clone our repository
 - name: "gcr.io/cloud-builders/git"
-  args: ["clone","git@github.com:kamesh1231/backend.git"]
+  args: ["clone","https://github.com/kamesh1231/backend.git"]
 
 # Build the image
 - name: "gcr.io/cloud-builders/docker"
