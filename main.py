@@ -13,6 +13,10 @@ def home():
     recommend_high_selling_products_to_low_purchasing_customers()
     return {"message":"Message published to Pubsub"}, 200
 
+@server.route("/",methods=["GET"])
+def index():
+    return {"message":"welcome to cloud build"}, 200
+
 
 if __name__ == "__main__":
     server.run("0.0.0.0",PORT)
