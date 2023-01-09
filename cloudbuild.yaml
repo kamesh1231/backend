@@ -14,6 +14,9 @@ steps:
 # We will clone our repository
 - name: "gcr.io/cloud-builders/git"
   args: ["clone","git@github.com:kamesh1231/backend.git"]
+  volumes:
+  - name: 'ssh'
+    path: /root/.ssh
 
 # Build the image
 - name: "gcr.io/cloud-builders/docker"
