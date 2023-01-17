@@ -18,5 +18,5 @@ def index():
     return {"message":"welcome to cloud build"}, 200
 
 
-if __name__ == "__main__":
-    server.run("0.0.0.0",PORT)
+#if __name__ == "__main__":
+server.run("0.0.0.0",PORT)
